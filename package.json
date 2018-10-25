@@ -1,0 +1,15 @@
+{
+  "name": "colar",
+  "version": "0.1.6",
+  "description": "colar tool",
+  "private":false,
+  "main": "colar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tool"
+  ],
+  "author": "zbj",
+  "license": "ISC"
+}
