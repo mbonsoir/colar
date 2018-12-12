@@ -20,7 +20,7 @@ const base = {
       return box;
     }
   }
-}
+};
 export{
   base
-}
+};

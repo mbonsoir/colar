@@ -8,7 +8,6 @@
 
     this.$colar.checkType([],'array')
 ```
-# Colar #
 ```html
-  新增tool.js文件、一些常用的工具函数
+  新增tool文件夹、一些常用的工具函数
 ```
