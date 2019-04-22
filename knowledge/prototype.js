@@ -1,8 +1,13 @@
 /**
+ * 以下是关于寄生组合式继的相关代码
+ * 感兴趣的可以去看高程3的第六章 面向对象程序设计
+ */
+
+/**
  * 
- * @param {原型} o
- * 继承方法 
- * 与es5 object.create(o)的功能一样
+ * @param {prototype} o
+ * 返回一个继承了传入对象的prototype并且是空属性的实例 （为了避免超类中无用的属性、造成的空间浪费）
+ * 与es5 object.create()的功能一样
  */
 function m_object(o) {
   function F() {};
@@ -12,7 +17,9 @@ function m_object(o) {
 /**
  * @param {function} sub 子类 
  * @param {function} sup 超类
- * 实现继承方法
+ * 实现类方法的继承
+ * 把constructor指向到子类
+ * 给子类的prototype 重新赋值
  */
 function inheritPrototype(sub, sup) {
   // 创建对象
@@ -61,11 +68,11 @@ People.prototype.run = function () {
 function ChinesePeople(name, age, sex, height, weight, nationality) {
   // 继承属性
   People.call(this, name, age, sex, height, weight);
-  // 自己的属性
+  // 子类自身的属性
   this.nationality = nationality;
 }
 
-// 实现继承超类的方法
+// 实现继承超类的方法 要放在子类方法之前
 inheritPrototype(ChinesePeople, People)
 
 /**
